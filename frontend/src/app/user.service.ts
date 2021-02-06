@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../environments/environment';
+
 import { User } from './user';
 import {Observable} from 'rxjs';
 
@@ -14,6 +16,6 @@ export class UserService {
   }
 
   get(): Observable<User> {
-    return this.http.get<User>('http://localhost/projects/auth-test/back/public/api/user', {withCredentials: true});
+    return this.http.get<User>(environment.backendPath + '/api/user', {withCredentials: true});
   }
 }

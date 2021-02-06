@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendPath: 'http://localhost/projects/auth-test/back/public'
+  backendPath: 'http://localhost/projects/auth-test/backend/public'
 };
 
 /*
